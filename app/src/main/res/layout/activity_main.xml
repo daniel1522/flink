@@ -52,7 +52,6 @@
             android:text="@string/error_network"
             android:visibility="gone" />
 
-
     </LinearLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
