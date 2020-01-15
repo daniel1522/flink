@@ -33,6 +33,7 @@
             android:visibility="gone" />
 
         <TextView
+            android:textColor="@android:color/white"
             android:id="@+id/error_find"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,6 +43,7 @@
             android:visibility="gone" />
 
         <TextView
+            android:textColor="@android:color/white"
             android:id="@+id/error_network"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
