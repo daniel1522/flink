@@ -4,7 +4,7 @@
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">true</item>
+        <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>

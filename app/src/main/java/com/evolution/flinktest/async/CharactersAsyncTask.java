@@ -109,11 +109,7 @@ public class CharactersAsyncTask extends AsyncTask<String, Integer, Boolean> {
                     new LinearLayoutManager(context);
             cRecyclerView.setLayoutManager(layoutManager);
             cRecyclerView.setHasFixedSize(true);
-            //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(cRecyclerView.getContext(),
-            //        layoutManager.getOrientation());
-            //cRecyclerView.addItemDecoration(dividerItemDecoration);
         } else {
-            //Toast.makeText(context, "Error al obtener datos del servidor", Toast.LENGTH_LONG).show();
             cRecyclerView.setVisibility(View.GONE);
             errorImage.setVisibility(View.VISIBLE);
             noNetTxt.setVisibility(View.VISIBLE);

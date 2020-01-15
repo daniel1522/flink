@@ -13,5 +13,6 @@
     <string name="error">No se encontraron resultados</string>
     <string name="error_network">Error al conectar con el servidor, revisa tu conexión a internet</string>
     <string name="auth">Daniel Mondragón M.</string>
-    <string name="search">Buscar...</string>
+    <string name="search">Search...</string>
+    <string name="info">Information</string>
 </resources>
