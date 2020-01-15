@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        //Toast.makeText(this, "Selecciona un personaje para ver mas información...", Toast.LENGTH_SHORT).show();
         cRecyclerView = (RecyclerView) findViewById(R.id.cRecyclerView);
         errorImage = (ImageView) findViewById(R.id.error_image);
         errorTxt = (TextView) findViewById(R.id.error_find);
