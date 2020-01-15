@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".DetailActivity"
+    android:background="@color/blue_back">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/c_image_detail"

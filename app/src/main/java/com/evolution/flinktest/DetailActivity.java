@@ -71,6 +71,7 @@ public class DetailActivity extends AppCompatActivity {
         detailCCreated.setText(getResources().getString(R.string.created) + " " + created);
         Picasso.get().load(image).into(detailCImage);
         getSupportActionBar().setTitle(name);
+        getSupportActionBar().setElevation(0);
     }
 
     @Override
