@@ -16,4 +16,8 @@
 <br>
 <p>Al seleccionar un personaje mandará una pantalla de su perfil completo</p>
 <img src="https://user-images.githubusercontent.com/25913317/72450022-4074eb80-377f-11ea-92f4-9c40b1ca3dd4.jpg" alt="Detail Screen" width="210" height="430">
+<br>
+<br>
+  <a href="https://github.com/daniel1522/flink/wiki"><p>Aquí pueden encontrar información más técnica</p></a>
+<p>Saludos</p>
 </div>
