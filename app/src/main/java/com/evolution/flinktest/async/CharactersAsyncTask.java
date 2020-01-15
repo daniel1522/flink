@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -110,9 +109,9 @@ public class CharactersAsyncTask extends AsyncTask<String, Integer, Boolean> {
                     new LinearLayoutManager(context);
             cRecyclerView.setLayoutManager(layoutManager);
             cRecyclerView.setHasFixedSize(true);
-            DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(cRecyclerView.getContext(),
-                    layoutManager.getOrientation());
-            cRecyclerView.addItemDecoration(dividerItemDecoration);
+            //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(cRecyclerView.getContext(),
+            //        layoutManager.getOrientation());
+            //cRecyclerView.addItemDecoration(dividerItemDecoration);
         } else {
             //Toast.makeText(context, "Error al obtener datos del servidor", Toast.LENGTH_LONG).show();
             cRecyclerView.setVisibility(View.GONE);

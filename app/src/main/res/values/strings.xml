@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Flink Test</string>
-
+    <string name="app_name">Rick and Morty</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="name">Name: </string>
@@ -14,4 +13,5 @@
     <string name="error">No se encontraron resultados</string>
     <string name="error_network">Error al conectar con el servidor, revisa tu conexión a internet</string>
     <string name="auth">Daniel Mondragón M.</string>
+    <string name="search">Buscar...</string>
 </resources>

@@ -5,7 +5,8 @@
     android:id="@+id/swipe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/blue_back">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,6 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/error_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,25 +29,26 @@
             android:layout_marginTop="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/error" />
+            android:src="@drawable/error"
+            android:visibility="gone" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/error_find"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/error" />
+            android:text="@string/error"
+            android:visibility="gone" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/error_network"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/error_network" />
+            android:text="@string/error_network"
+            android:visibility="gone" />
 
 
     </LinearLayout>

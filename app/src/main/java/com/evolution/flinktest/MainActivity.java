@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -39,11 +38,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        Toast.makeText(this, "Selecciona un personaje para ver mas información...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Selecciona un personaje para ver mas información...", Toast.LENGTH_SHORT).show();
         cRecyclerView = (RecyclerView) findViewById(R.id.cRecyclerView);
         errorImage = (ImageView) findViewById(R.id.error_image);
         errorTxt = (TextView) findViewById(R.id.error_find);
         noNetTxt = (TextView) findViewById(R.id.error_network);
+        getSupportActionBar().setElevation(0);
     }
 
     private void loadData() {
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         final MenuItem item = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) item.getActionView();
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
-        searchView.setQueryHint("Buscar...");
+        searchView.setQueryHint(getResources().getString(R.string.search));
         EditText searchEditText = searchView.findViewById(R.id.search_src_text);
         searchEditText.setTextColor(getResources().getColor(android.R.color.white));
         searchEditText.setHintTextColor(getResources().getColor(android.R.color.white));

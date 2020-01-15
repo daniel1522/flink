@@ -42,7 +42,6 @@ public class DetailActivity extends AppCompatActivity {
     private void init() {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         detailCName = (TextView) findViewById(R.id.c_detail_name);
         detailCStatus = (TextView) findViewById(R.id.c_detail_status);
         detailCSpecies = (TextView) findViewById(R.id.c_detail_species);
@@ -52,7 +51,6 @@ public class DetailActivity extends AppCompatActivity {
         detailCLocation = (TextView) findViewById(R.id.c_detail_location);
         detailCCreated = (TextView) findViewById(R.id.c_detail_created);
         detailCImage = (ImageView) findViewById(R.id.c_image_detail);
-
         intent = getIntent();
         name = intent.getStringExtra("name");
         status = intent.getStringExtra("status");
@@ -63,7 +61,6 @@ public class DetailActivity extends AppCompatActivity {
         location = intent.getStringExtra("location");
         created = intent.getStringExtra("created");
         image = intent.getStringExtra("image");
-
         detailCName.setText(getResources().getString(R.string.name) + " " + name);
         detailCStatus.setText(getResources().getString(R.string.status) + " " + status);
         detailCSpecies.setText(getResources().getString(R.string.species) + " " + species);
@@ -73,6 +70,7 @@ public class DetailActivity extends AppCompatActivity {
         detailCLocation.setText(getResources().getString(R.string.location) + " " + location);
         detailCCreated.setText(getResources().getString(R.string.created) + " " + created);
         Picasso.get().load(image).into(detailCImage);
+        getSupportActionBar().setTitle(name);
     }
 
     @Override

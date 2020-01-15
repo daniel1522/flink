@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#74C145</color>
+    <color name="colorPrimary">#373775</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#000</color>
+    <color name="colorAccent">#07B1CA</color>
     <color name="background">#25282D</color>
     <color name="black_overlay">#66000000</color>
+    <color name="blue_back">#41406E</color>
+    <color name="blue_card">#434372</color>
 </resources>

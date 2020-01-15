@@ -95,9 +95,9 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
         }
 
         public void bindMovement(Character character) {
-            cName.setText("Name: " + character.getName());
-            cStatus.setText("Status: " + character.getStatus());
-            cSpecie.setText("Species: " + character.getSpecies());
+            cName.setText(character.getName());
+            cStatus.setText(character.getStatus());
+            cSpecie.setText(character.getSpecies());
             Picasso.get().load(character.getImage()).into(cImage);
         }
     }
