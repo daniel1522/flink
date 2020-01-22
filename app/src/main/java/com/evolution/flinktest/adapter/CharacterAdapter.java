@@ -70,10 +70,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
 
         public CharacterViewHolder(final View itemView) {
             super(itemView);
-            cImage = (ImageView) itemView.findViewById(R.id.c_image);
-            cName = (TextView) itemView.findViewById(R.id.c_name);
-            cStatus = (TextView) itemView.findViewById(R.id.c_status);
-            cSpecie = (TextView) itemView.findViewById(R.id.c_specie);
+            cImage = itemView.findViewById(R.id.c_image);
+            cName = itemView.findViewById(R.id.c_name);
+            cStatus = itemView.findViewById(R.id.c_status);
+            cSpecie = itemView.findViewById(R.id.c_specie);
             context = itemView.getContext();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

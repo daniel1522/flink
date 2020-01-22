@@ -1,13 +1,9 @@
 package com.evolution.flinktest.async;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.view.View;
+import android.util.Log;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.evolution.flinktest.adapter.CharacterAdapter;
 import com.evolution.flinktest.model.Character;
 
 import org.json.JSONArray;
@@ -18,40 +14,30 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 
 import static com.evolution.flinktest.MainActivity.cAdapter;
-import static com.evolution.flinktest.MainActivity.cRecyclerView;
 import static com.evolution.flinktest.MainActivity.characters;
 import static com.evolution.flinktest.MainActivity.currentUrl;
-import static com.evolution.flinktest.MainActivity.errorImage;
-import static com.evolution.flinktest.MainActivity.layoutManager;
-import static com.evolution.flinktest.MainActivity.noNetTxt;
+import static com.evolution.flinktest.MainActivity.loading;
 
-public class CharactersAsyncTask extends AsyncTask<String, Integer, Boolean> {
+public class LoadMoreAsyncTask extends AsyncTask<String, Integer, Boolean> {
 
     private Context context;
     private String serverResponse = null;
-    private ProgressDialog dialog;
 
-    public CharactersAsyncTask(Context context) {
+    public LoadMoreAsyncTask(Context context) {
         this.context = context;
     }
 
     @Override
     protected void onPreExecute() {
-        cRecyclerView.setAdapter(null);
-        cRecyclerView.setVisibility(View.VISIBLE);
-        noNetTxt.setVisibility(View.GONE);
-        dialog = ProgressDialog.show(context, "",
-                "Cargando...", true);
-        dialog.show();
+        Log.v("LMAT", "Loading more...");
     }
 
     @Override
     protected Boolean doInBackground(String... params) {
         try {
-            String url = "https://rickandmortyapi.com/api/character/";
+            String url = params[0];
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             // optional default is GET
@@ -76,14 +62,10 @@ public class CharactersAsyncTask extends AsyncTask<String, Integer, Boolean> {
     @Override
     protected void onPostExecute(Boolean result) {
 
-        dialog.dismiss();
-
         if (serverResponse != null) {
-
-            characters = new ArrayList<>();
-
             try {
                 JSONObject response = new JSONObject(serverResponse);
+
                 JSONArray charList = response.getJSONArray("results");
                 for (int i = 0; i < charList.length(); i++) {
 
@@ -106,17 +88,8 @@ public class CharactersAsyncTask extends AsyncTask<String, Integer, Boolean> {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-            cAdapter = new CharacterAdapter(context, characters);
-            cRecyclerView.setAdapter(cAdapter);
-            layoutManager =
-                    new LinearLayoutManager(context);
-            cRecyclerView.setLayoutManager(layoutManager);
-            cRecyclerView.setHasFixedSize(true);
-        } else {
-            cRecyclerView.setVisibility(View.GONE);
-            errorImage.setVisibility(View.VISIBLE);
-            noNetTxt.setVisibility(View.VISIBLE);
+            cAdapter.notifyDataSetChanged();
+            loading = true;
         }
     }
 }

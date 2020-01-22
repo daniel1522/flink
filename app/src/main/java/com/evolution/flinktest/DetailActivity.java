@@ -42,15 +42,15 @@ public class DetailActivity extends AppCompatActivity {
     private void init() {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        detailCName = (TextView) findViewById(R.id.c_detail_name);
-        detailCStatus = (TextView) findViewById(R.id.c_detail_status);
-        detailCSpecies = (TextView) findViewById(R.id.c_detail_species);
-        detailCType = (TextView) findViewById(R.id.c_detail_type);
-        detailCGender = (TextView) findViewById(R.id.c_detail_gender);
-        detailCOrigin = (TextView) findViewById(R.id.c_detail_origin);
-        detailCLocation = (TextView) findViewById(R.id.c_detail_location);
-        detailCCreated = (TextView) findViewById(R.id.c_detail_created);
-        detailCImage = (ImageView) findViewById(R.id.c_image_detail);
+        detailCName = findViewById(R.id.c_detail_name);
+        detailCStatus = findViewById(R.id.c_detail_status);
+        detailCSpecies = findViewById(R.id.c_detail_species);
+        detailCType = findViewById(R.id.c_detail_type);
+        detailCGender = findViewById(R.id.c_detail_gender);
+        detailCOrigin = findViewById(R.id.c_detail_origin);
+        detailCLocation = findViewById(R.id.c_detail_location);
+        detailCCreated = findViewById(R.id.c_detail_created);
+        detailCImage = findViewById(R.id.c_image_detail);
         intent = getIntent();
         name = intent.getStringExtra("name");
         status = intent.getStringExtra("status");
