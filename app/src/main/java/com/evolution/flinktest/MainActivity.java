@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
     public static TextView errorTxt;
     public static TextView noNetTxt;
     public static LinearLayoutManager layoutManager;
-    private SwipeRefreshLayout swipeRefreshLayout;
     public static boolean loading = true;
     public static String currentUrl = "";
     int pastVisiblesItems, visibleItemCount, totalItemCount;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
